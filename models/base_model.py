@@ -7,6 +7,6 @@
 class BaseModel:
     """
         The base class for all other classes created 
-        in this project.
+        in this project..
     """
     pass
