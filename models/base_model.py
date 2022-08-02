@@ -5,6 +5,7 @@
 """
 from uuid import uuid4
 from datetime import datetime
+import json
 
 class BaseModel:
     """
@@ -13,21 +14,26 @@ class BaseModel:
     """
 
     def __init__(self, num=0):
-        self.id = uuid4()
+        self.id = str(uuid4())
         self.created_at = datetime.today()
         self.updated_at = datetime.today()
 
     def __str__(self):
         """Define the print() representation of the BaseModel"""
-        pass
+        print("[{}] ({}) ".format(type(self).__name__, self.id), self.__dict__)
+        return ("")
 
     def save(self):
         """Updates the attribute 'update_at' with the current datetime"""
-        self.update_at = datetime.today()
+
+        self.updated_at = self.updated_at.now()
 
     def to_dict(self):
         """Returns a dictionary containing key/value pairs of __dict__"""
-        pass
+        s_created_at = self.created_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
+        s_updated_at = self.updated_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
+        self.__dict__['created_at'] = s_created_at
+        self.__dict__['updated_at'] = s_updated_at
+        self.__dict__['__class__'] = type(self).__name__
 
-
-
+        return (self.__dict__)
