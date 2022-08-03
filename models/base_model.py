@@ -20,10 +20,10 @@ class BaseModel:
                 if k == 'id':
                     self.id = v
                 elif k == 'created_at':
-                    v = strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
+                    v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
                     self.created_at = v
                 elif k == 'updated_at':
-                    v = strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
+                    v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
                     self.updated_at = v
                 else:
                     if k != "__class__":
