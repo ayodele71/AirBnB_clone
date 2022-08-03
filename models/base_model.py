@@ -7,9 +7,10 @@ from uuid import uuid4
 from datetime import datetime
 import json
 
+
 class BaseModel:
     """
-        The base class for all other classes created 
+        The base class for all other classes created
         in this project..
     """
 
