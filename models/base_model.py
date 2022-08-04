@@ -13,10 +13,25 @@ class BaseModel:
         in this project..
     """
 
-    def __init__(self, num=0):
-        self.id = str(uuid4())
-        self.created_at = datetime.today()
-        self.updated_at = datetime.today()
+    def __init__(self, *args, **kwargs):
+        
+        if kwargs:
+            for k, v in kwargs.items():
+                if k == 'id':
+                    self.id = v
+                elif k == 'created_at':
+                    v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
+                    self.created_at = v
+                elif k == 'updated_at':
+                    v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
+                    self.updated_at = v
+                else:
+                    if k != "__class__":
+                        self.k = v
+        else:
+            self.id = str(uuid4())
+            self.created_at = datetime.today()
+            self.updated_at = datetime.today()
 
     def __str__(self):
         """Define the print() representation of the BaseModel"""
