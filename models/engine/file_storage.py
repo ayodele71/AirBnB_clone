@@ -25,4 +25,4 @@ class FileStorage:
         self.__objects.update(key)
 
     def save(self):
-        """
+        """This method serializes __objects to JSON file"""
