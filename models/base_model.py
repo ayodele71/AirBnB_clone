@@ -36,8 +36,7 @@ class BaseModel:
 
     def __str__(self):
         """Define the print() representation of the BaseModel"""
-        print("[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
-        return ("")
+        return "[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
         """Updates the attribute 'update_at' with the current datetime"""
