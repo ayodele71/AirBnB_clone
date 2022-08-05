@@ -36,7 +36,7 @@ class BaseModel:
 
     def __str__(self):
         """Define the print() representation of the BaseModel"""
-        print("[{}] ({}) {}".format(type(self).__name__, self.id), self.__dict__)
+        print("[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
         return ("")
 
     def save(self):
