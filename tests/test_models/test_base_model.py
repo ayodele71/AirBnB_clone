@@ -84,8 +84,8 @@ class TestBaseModel_Kwargs_Instance(unittest.TestCase):
         model2 = BaseModel(**kwargs_dict)
         self.assertEqual(model1.id, model2.id)
         self.assertEqual(model1.my_number, model2.my_number)
-        self.assertEqual(model1.created_at.isoformat(), model2.created_at.isoformat())
-        self.assertEqual(model1.updated_at.isoformat(), model2.updated_at.isoformat())
+        self.assertEqual(model1.created_at, model2.created_at.isoformat())
+        self.assertEqual(model1.updated_at, model2.updated_at.isoformat())
         
 if __name__ == "__main__":
     unittest.main()

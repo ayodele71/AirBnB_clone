@@ -28,7 +28,7 @@ class BaseModel:
                     self.updated_at = v
                 else:
                     if k != "__class__":
-                        self.k = v
+                        self.__dict__[k] = v
         else:
             self.id = str(uuid4())
             self.created_at = datetime.today()
