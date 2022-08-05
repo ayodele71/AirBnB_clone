@@ -1,14 +1,73 @@
 #!/usr/bin/python3
+"""unittests for BaseClass from which all major objects inherits"""
+
+from datetime import datetime
+import unittest
 from models.base_model import BaseModel
 
-my_model = BaseModel()
-my_model.name = "My First Model"
-my_model.my_number = 89
-print(my_model)
-my_model.save()
-print(my_model)
-my_model_json = my_model.to_dict()
-print(my_model_json)
-print("JSON of my_model:")
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
+class TestBaseModel_Instantiation(unittest.TestCase):
+    """Tests for BaseModel instantiation"""
+
+    def test_IsInstanceOf(self):
+        model1 = BaseModel()
+        self.assertIsInstance(model1, BaseModel)
+
+    def test_ContainsId(self):
+        model1 = BaseModel()
+        self.assertTrue(hasattr(model1, "id"))
+
+    def test_IdType(self):
+        model1 = BaseModel()
+        self.assertEqual(type(model1.id), str)
+
+    def test_CompareTwoInstancesId(self):
+        model1 = BaseModel()
+        model2 = BaseModel()
+        self.assertNotEqual(model1.id, model2.id)
+
+    def test_ContainsCreated_at(self):
+        model1 = BaseModel()
+        self.assertTrue(hasattr(model1, "created_at"))
+
+    def test_Created_atInstance(self):
+        model1 = BaseModel()
+        self.assertIsInstance(model1.created_at, datetime)
+
+    def test_ContainUpdated_at(self):
+        model1 = BaseModel()
+        self.assertTrue(hasattr(model1, "updated_at"))
+
+    def test_Updated_atInstance(self):
+        model1 = BaseModel()
+        self.assertIsInstance(model1.updated_at, datetime)
+
+class TestBaseModel_Instance_Print(unittest.TestCase):
+    """This class tests the return value of BaseModel's __str__ method."""
+
+    def test_str_value(self):
+        model1 = BaseModel()
+        model_str = "[{}] ({}) {}".format("BaseModel", model1.id, str(model1.__dict__))
+        self.assertEqual(str(model1), model_str)
+
+class TestBaseModel_Save_Method(unittest.TestCase):
+    """This class tests BaseModel's save method"""
+
+    def test_validates_save(self):
+        model1 = BaseModel()
+        updated_at_1 = model1.updated_at
+        model1.save()
+        updated_at_2 = model1.updated_at
+        self.assertNotEqual(updated_at_1, updated_at_2)
+
+class TestBaseModel_to_Dict_Method(unittest.TestCase):
+    """This class tests BaseModel's to_dict method."""
+
+    def test_className_present(self):
+        model1 = BaseModel()
+        model_dict = model1.to_dict()
+        self.assertTrue(hasattr(model_dict, "__class__"))
+
+
+
+            
+
