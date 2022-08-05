@@ -74,16 +74,18 @@ class TestBaseModel_to_Dict_Method(unittest.TestCase):
         self.assertEqual(type(model_dict["updated_at"]), str)
 
 class TestBaseModel_Kwargs_Instance(unittest.TestCase):
-    
+    """This class tests BaseModel instantiation with keyword arguments"""
 
+    def test_reinstantiation_from_dict(self):
+        model1 = BaseModel()
+        model1.my_number = 89
 
-
-
-
-
-
-
-
-
-            
-
+        kwargs_dict = model1.to_dict()
+        model2 = BaseModel(**kwargs_dict)
+        self.assertEqual(model1.id, model2.id)
+        self.assertEqual(model1.my_number, model2.my_number)
+        self.assertEqual(model1.created_at.isoformat(), model2.created_at.isoformat())
+        self.assertEqual(model1.updated_at.isoformat(), model2.updated_at.isoformat())
+        
+if __name__ == "__main__":
+    unittest.main()
