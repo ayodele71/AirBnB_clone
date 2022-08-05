@@ -66,6 +66,22 @@ class TestBaseModel_to_Dict_Method(unittest.TestCase):
         model1 = BaseModel()
         model_dict = model1.to_dict()
         self.assertTrue(hasattr(model_dict, "__class__"))
+    
+    def test_formatted_attributes(self):
+        model1 = BaseModel()
+        model_dict = model1.to_dict()
+        self.assertEqual(type(model_dict["created_at"]), str)
+        self.assertEqual(type(model_dict["updated_at"]), str)
+
+class TestBaseModel_Kwargs_Instance(unittest.TestCase):
+    
+
+
+
+
+
+
+
 
 
 
