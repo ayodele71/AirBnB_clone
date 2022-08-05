@@ -8,9 +8,10 @@ from datetime import datetime
 import json
 import models.storage
 
+
 class BaseModel:
     """
-        The base class for all other classes created 
+        The base class for all other classes created
         in this project..
     """
 
@@ -28,7 +29,7 @@ class BaseModel:
                     self.updated_at = v
                 else:
                     if k != "__class__":
-                        self.k = v
+                        self.__dict__[k] = v
         else:
             self.id = str(uuid4())
             self.created_at = datetime.today()
@@ -37,8 +38,7 @@ class BaseModel:
 
     def __str__(self):
         """Define the print() representation of the BaseModel"""
-        print("[{}] ({}) ".format(type(self).__name__, self.id), self.__dict__)
-        return ("")
+        return "[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
         """Updates the attribute 'update_at' with the current datetime"""
