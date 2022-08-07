@@ -3,8 +3,9 @@
 This directory contains all unit tests for this project.
 
 * [BaseModel Tests](./test_models/test_base_model.py):
-| Test                       		                       | Status|
-| ------------------------------------------------------------ | ------|
+
+| Test                       		                               | Status|
+| -----------------------------------------                    | ------|
 | Model is an instance of `BaseModel`                          | `OK`  |
 | Model contains `id` attribute                                | `OK`  |
 | Model `id` attribute is a string                             | `OK`  |
