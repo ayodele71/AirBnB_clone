@@ -2,7 +2,7 @@
 ![N|Solid](./images/hbnb.jpeg)
 
 # Overview:
-The goal of this project is to deploy a simple copy of the [AirBnB](www.airbnb.com) website as part of the [ALX Holberton](www.alx.com) software engineering program. At the end of 4 months, we would have built a web application composed by:
+The goal of this project is to deploy a simple copy of the <a href=https://www.airbnb.com/>AirBnB</a> website as part of the <a href=https://www.alxafrica.com/>ALX</a> software engineering program. At the end of 4 months, we would have built a web application composed by:
 
 	* A command interpreter to manipulate data without a visual interface.
 	* A static and dynamic website (the front-end) that shows the final product.
