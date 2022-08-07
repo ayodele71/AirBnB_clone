@@ -3,21 +3,27 @@
 
 # Overview:
 The goal of this project is to deploy a simple copy of the [AirBnB](www.airbnb.com) website as part of the [ALX Holberton](www.alx.com) software engineering program. At the end of 4 months, we would have built a web application composed by:
+
 	* A command interpreter to manipulate data without a visual interface.
 	* A static and dynamic website (the front-end) that shows the final product.
 	* A database and files that store data.
 	* An API that provides communication interface between the front-end and our data.
 
 # HBNB Stack:
-Ubuntu, Python, JSON, MySQL, Flask, JQuery, JavaScript, HTML5
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+
 
 # Phases:
 ## Phase one (The console):
 The first piece is to build our own command line inerpreter in python, to manipulate a powerful storage engine entirely from the console to:
-	* create data model.
-	* manage (create, update, destroy, etc) objects via a console/command interpreter.
-	* store and persist objects to a file (JSON file).
-![N|Solid](./images/)
+* create data model.
+* manage (create, update, destroy, etc) objects via a console/command interpreter.
+* store and persist objects to a file (JSON file).
+
+
+
+
+![N|Solid](./images/Phase1.png)
 
 ## Other phases will be documented as development effort progresses.
 
@@ -33,6 +39,6 @@ The first piece is to build our own command line inerpreter in python, to manipu
 * [hack](./hack) contains wall hacks, aim assist and speed haxx for eez claps. Just wget [generate-authors.sh](./hack/generate-authors.sh) and run it from the root directory of your project like this `./generate-authors.sh`
 
 
-AUTHORS:
-[Opeyemi Fuad Akande](www.github.com)
+AUTHORS:<br>
+[Opeyemi Fuad Akande](www.github.com)<br>
 [Adebayo Demilade Emmanuel](www.github.com/AdebayoEmmanuel)
