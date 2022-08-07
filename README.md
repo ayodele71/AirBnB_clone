@@ -36,7 +36,7 @@ The first piece is to build our own command line inerpreter in python, to manipu
 	* methods: `save()` and `to_json()`
 * [engine](./models/engine) directory contains all storage classes (using the same prototype). For now, we only have [file_storage.py](./models/engine/file_storage.py).
 * [images](./images) directory contains all images used within this repository.
-* [hack](./hack) contains wall hacks, aim assist and speed haxx for eez claps. Just wget [generate-authors.sh](./hack/generate-authors.sh) and run it from the root directory of your project like this `./generate-authors.sh`
+* [hack](./hack) contains the shell script that generated the [AUTHORS](./AUTHORS) file. If you want to use it for your project too, just wget [generate-authors.sh](./hack/generate-authors.sh) and run it from the root directory of your project like this `./generate-authors.sh`
 
 
 AUTHORS:<br>
