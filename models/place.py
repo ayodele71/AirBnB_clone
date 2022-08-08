@@ -25,7 +25,8 @@ class Place(BaseModel):
     # initializes these varaiables with placeholder values
     
     # Commits works
-    # Some more commit works
+    # Some more commit work
+    # even more
     city_id = ""
     user_id = ""
     name = ""
