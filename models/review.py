@@ -10,8 +10,10 @@ class Review(BaseModel):
         place_id (str): The Place id.
         user_id (str): The User id.
         text (str): The text of the review.
-    """
 
+
+    """
+    # some place holder
     place_id = ""
     user_id = ""
     text = ""
