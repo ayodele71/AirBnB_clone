@@ -28,6 +28,7 @@ class Place(BaseModel):
     # Some more commit work
     # even more
     # and some more
+    # and even more
     city_id = ""
     user_id = ""
     name = ""
