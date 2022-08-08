@@ -18,6 +18,7 @@ class Place(BaseModel):
         latitude (float): The latitude of the place.
         longitude (float): The longitude of the place.
         amenity_ids (list): A list of Amenity ids.
+
     """
 
     city_id = ""
