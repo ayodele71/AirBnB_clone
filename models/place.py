@@ -21,8 +21,6 @@ class Place(BaseModel):
 
     """
     
-
-    # initializes these varaiables with placeholder values
     city_id = ""
     user_id = ""
     name = ""
