@@ -11,4 +11,5 @@ class Amenity(BaseModel):
         some place holder
     """
 
+    # adding some comment
     name = ""
