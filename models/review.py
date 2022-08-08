@@ -13,7 +13,7 @@ class Review(BaseModel):
 
 
     """
-    # some place holder text is here
+    # what should ber here
     place_id = ""
     user_id = ""
     text = ""
