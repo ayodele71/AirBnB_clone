@@ -20,6 +20,9 @@ class Place(BaseModel):
         amenity_ids (list): A list of Amenity ids.
 
     """
+    
+
+    # initializes these varaiables with placeholder values
 
     city_id = ""
     user_id = ""
