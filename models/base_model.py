@@ -38,6 +38,8 @@ class BaseModel:
 
         Includes the key/value pair __class__ representing
         the class name of the object.
+
+        Some implementation later
         """
         rdict = self.__dict__.copy()
         rdict["created_at"] = self.created_at.isoformat()
