@@ -40,5 +40,5 @@ The first piece is to build our own command line inerpreter in python, to manipu
 
 
 AUTHORS:<br>
-[Opeyemi Fuad Akande](www.github.com)<br>
+[Opeyemi Fuad Akande](https://github.com/OpeyemiAkande)<br>
 [Adebayo Demilade Emmanuel](www.github.com/AdebayoEmmanuel)
